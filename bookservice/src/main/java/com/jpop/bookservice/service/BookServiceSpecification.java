@@ -5,13 +5,13 @@ import java.util.List;
 
 public interface BookServiceSpecification {
 
-    List<Book> getBook();
+  List<Book> getBook();
 
-    Book getBook(Long id);
+  Book getBook(Long id);
 
-    Book saveBook(Book book);
+  Book saveBook(Book book);
 
-    Book updateBook(Book book, Long id);
+  Book updateBook(Book book, Long id);
 
-    void deleteBook(Long id);
+  void deleteBook(Long id);
 }
