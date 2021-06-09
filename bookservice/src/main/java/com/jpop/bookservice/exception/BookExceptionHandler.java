@@ -12,17 +12,17 @@ import java.time.LocalDate;
 @ControllerAdvice
 public class BookExceptionHandler extends ResponseEntityExceptionHandler {
 
-    BookException bookException;
+    BookExceptionMessage bookExceptionMessage;
 
     @Inject
-    public BookExceptionHandler(BookException bookException) {
-        this.bookException = bookException;
+    public BookExceptionHandler(BookExceptionMessage bookExceptionMessage) {
+        this.bookExceptionMessage = bookExceptionMessage;
     }
 
     @ExceptionHandler({BookNotFoundException.class})
-    protected ResponseEntity<BookException> handleBookNotFoundException(Exception ex, WebRequest request) {
-        bookException.setLocalDate(LocalDate.now());
-        bookException.setMessage(ex.getMessage());
-        return new ResponseEntity<>(bookException,HttpStatus.NOT_FOUND);
+    protected ResponseEntity<BookExceptionMessage> handleBookNotFoundException(Exception ex, WebRequest request) {
+        bookExceptionMessage.setLocalDate(LocalDate.now());
+        bookExceptionMessage.setMessage(ex.getMessage());
+        return new ResponseEntity<>(bookExceptionMessage,HttpStatus.NOT_FOUND);
     }
 }

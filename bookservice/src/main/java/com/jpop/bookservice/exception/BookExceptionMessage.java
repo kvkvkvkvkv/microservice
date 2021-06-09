@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @Data
 @Component
-public class BookException {
+public class BookExceptionMessage {
     LocalDate localDate;
     String message;
 }
