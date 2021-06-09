@@ -4,13 +4,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 
 public class UserNotFoundException extends RuntimeException {
-    public UserNotFoundException(String message) {
-        super(message);
-    }
+  public UserNotFoundException(String message) { super(message); }
 
-    @Bean
-    public ModelMapper modelMapper() {
-        return new ModelMapper();
-    }
-
+  @Bean
+  public ModelMapper modelMapper() {
+    return new ModelMapper();
+  }
 }

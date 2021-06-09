@@ -5,9 +5,9 @@ import lombok.Data;
 @Data
 public class UserDto {
 
-    Long id;
+  Long id;
 
-    String name;
+  String name;
 
-    String address;
+  String address;
 }
